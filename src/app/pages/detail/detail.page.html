@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>detail</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img src="{{foto}}">
+  <ion-item >
+    <ion-label>id_member :</ion-label>
+    <ion-input slot="end"  type="text" disabled="true">{{id_member}}</ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Nama Penyewa :</ion-label>
+    <ion-input slot="end" type="text" disabled="true" >{{nama_member}}</ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Nomor Hp :</ion-label>
+    <ion-input slot="end" type="text" disabled="true">{{no_hp}}</ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label font-color="white">Kendaraan :</ion-label>
+    <ion-input slot="end" type="text" disabled="true" [(ngModel)]="nama_kendaraan" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Tipe :</ion-label>
+    <ion-input slot="end" style="font-size: medium;" disabled="true" [(ngModel)]="tipe_kendaraan" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Tahun :</ion-label>
+    <ion-input slot="end" style="font-size: medium;" disabled="true" [(ngModel)]="tahun"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Plat :</ion-label>
+    <ion-input slot="end" style="font-size: medium;" disabled="true" [(ngModel)]="plat"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Warna :</ion-label>
+    <ion-input slot="end" style="font-size: medium;" disabled="true" [(ngModel)]="warna"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label >Harga :</ion-label>
+    <ion-input slot="end" style="font-size: medium;" disabled="true" [(ngModel)]="harga">Rp. </ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label >Lama Sewa :</ion-label>
+    <ion-select interface="popover" value="1" slot="end" [(ngModel)]="lama_sewa">
+      <ion-select-option value="1">1 Hari</ion-select-option>
+      <ion-select-option value="2">2 Hari</ion-select-option>
+      <ion-select-option value="3">3 Hari</ion-select-option>
+      <ion-select-option value="4">4 Hari</ion-select-option>
+      <ion-select-option value="5">5 Hari</ion-select-option>
+      <ion-select-option value="6">6 Hari</ion-select-option>
+      <ion-select-option value="7">7 Hari</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Total Harga :</ion-label>
+    <ion-input slot="end" style="font-size: medium;" disabled="true" [(ngModel)]="total">Rp. {{lama_sewa*harga}}</ion-input>
+  </ion-item>
+  <ion-item style="color:#999">
+    <ion-label>Tanggal Sewa</ion-label>
+    <ion-datetime displayFormat="DD/MM/YYYY" min="1945-03-14" max="2050-12-09" [(ngModel)]="tgl_sewa"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label>Jam Pengambilan</ion-label>
+    <ion-datetime display-format="HH:mm" picker-format="HH:mm" [(ngModel)]="jam_pengambilan"></ion-datetime>
+  </ion-item>
+
+ 
+    <ion-button expand="full" class="no-padding" color="success" (click)="booking(1)">Booking</ion-button>
+
+  
+
+</ion-content>

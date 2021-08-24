@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label position="floating">Email / Nomor Hp</ion-label>
+     <ion-input inputmode="email" type="text" placeholder="Email" [(ngModel)]="email"  [(ngModel)]="no_hp"></ion-input>
+    </ion-item>
+
+
+     <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input inputmode="password" type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+     </ion-item>
+ 
+    
+     
+     <ion-button expand="full" class="no-padding" color="success" (click)="cobalogin()">Login</ion-button>
+     <p class="ion-pading" info-1 >
+       Registrasi jika belum punya akun
+     </p>
+     <ion-button expand="full" class="no-padding" color="success" (click)="bukaRegister()">Register</ion-button>
+    </ion-list>
+
+    
+</ion-content>
