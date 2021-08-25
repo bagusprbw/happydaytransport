@@ -6,8 +6,8 @@ import 'rxjs/add/operator/timeout';
 @Injectable()
 export class AccessProviders {
     // url backed api json
-    server = 'http://127.0.0.1:4040/api/';
-    gambar = 'http://127.0.0.1:4040/web_rental/upload/product/';
+    server = 'https://198a-202-152-137-24.ngrok.io/api/';
+    gambar = 'https://198a-202-152-137-24.ngrok.io/web_rental/upload/product/';
 
     constructor(
         public http: HttpClient,
